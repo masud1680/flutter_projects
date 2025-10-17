@@ -251,6 +251,69 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ],
         ),
       ),
+
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 10),
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Icon(Icons.list,size: 25,),
+                      Text(
+                        "List",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Icon(Icons.settings,size: 25,),
+                      Text(
+                        "Settings",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+
+              Positioned(
+                  left: 120,
+                  bottom: 20,
+
+                  child: ElevatedButton(
+
+                      onPressed: (){},
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(15),
+                        backgroundColor: Colors.blue
+                      ),
+
+                      child: Icon(
+                          Icons.add,
+                          size: 40,
+                        color: Colors.white,
+                      )
+                  )
+              )
+            ],
+          ),
+        ),
+      )
     );
   }
 }
