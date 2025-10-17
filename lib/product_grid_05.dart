@@ -8,6 +8,35 @@ class AddItemScreen extends StatefulWidget {
 }
 
 class _AddItemScreenState extends State<AddItemScreen> {
+  // json
+  dynamic data = [
+    {
+      "name": "Chocolate Croissant",
+      "price": 2.50,
+      "quantity": 30
+    },
+    {
+      "name": "Blueberry Muffin",
+      "price": 2.75,
+      "quantity": 45
+    },
+    {
+      "name": "Sourdough Loaf",
+      "price": 5.00,
+      "quantity": 15
+    },
+    {
+      "name": "Cinnamon Roll",
+      "price": 3.25,
+      "quantity": 25
+    },
+    {
+      "name": "Red Velvet Cupcake",
+      "price": 3.50,
+      "quantity": 40
+    }
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +73,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
             SizedBox(height: 20,),
             Expanded(
               child: ListView.builder(
-                itemCount: 4,
+                itemCount: data.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5),
@@ -53,7 +82,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
 
                         children: [
                           Text(
-                            "Chocolate",
+                            "${data[index]["name"]}",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 18,
