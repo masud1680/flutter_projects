@@ -90,15 +90,36 @@ class _FavoriteList2State extends State<FavoriteList2> {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 15),
-          child: Icon(Icons.arrow_back_ios),
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xFFE7E5E4),
+                  blurRadius: 4,
+                  spreadRadius: 2
+                )
+              ]
+            ),
+            width: 20,
+            height: 20,
+            child: Padding(
+              padding: const EdgeInsets.only(left:8),
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.black,
+              ),
+            ),
+          ),
         ),
         centerTitle: true,
         title: Text(
-          "Favorite List",
+          "Product of Grocery",
           style: TextStyle(
               color: Colors.black,
-              fontWeight: FontWeight.w700,
-              fontSize: 25
+              fontWeight: FontWeight.w600,
+              fontSize: 20
           ),
         ),
         actions: [
@@ -146,6 +167,7 @@ class _FavoriteList2State extends State<FavoriteList2> {
                   return Stack(
                     children: [
                       Card(
+                        color: Color(0xFFDDE8E2),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           spacing: 4,
@@ -178,7 +200,7 @@ class _FavoriteList2State extends State<FavoriteList2> {
                                     Text(
                                       " ${data[index]["quantity_or_weight"]}",
                                       style: TextStyle(
-                                          color: Color(0xFFB6D3CC),
+                                          color: Color(0xFF737373),
                                           fontWeight: FontWeight.w500,
                                           fontSize: 12
 
@@ -295,7 +317,7 @@ class _FavoriteList2State extends State<FavoriteList2> {
                         child: Text(
                           "\$ ${data[index]["price"]}",
                           style: TextStyle(
-                              color: Color(0xFFB6D3CC),
+                              color: Color(0xFF0A0A0A),
                               fontWeight: FontWeight.w500,
                               fontSize: 12
 
