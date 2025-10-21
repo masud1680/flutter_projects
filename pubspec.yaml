@@ -63,6 +63,7 @@ flutter:
       - assets/product_grid_01/
       - assets/product_grid_02/
       - assets/product_grid_04/
+      - assets/login_page/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
